@@ -14,3 +14,30 @@ weights/
 # データセットのフォルダ（巨大な画像ファイルなどが入っている場合）
 datasets/
 data/
+# データセットと重みファイル、一時ファイルを除外
+yolov8n.pt
+__pycache__/
+dataset/
+dataset.yaml
+10.50/
+11.52/
+102/
+111/
+# 1. すべての画像ファイルをデフォルトで無視
+original/*
+
+# 2. ただし、指定されたコードファイルのみ例外として追跡対象に戻す
+!original/config.py
+!original/data.py
+!original/models.py
+!original/train.py
+
+# 3. その他、不要なファイルやフォルダも除外
+yolov8n.pt
+__pycache__/
+dataset/
+dataset.yaml
+10.50/
+11.52/
+102/
+111/
